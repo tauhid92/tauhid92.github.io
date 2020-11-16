@@ -1,5 +1,5 @@
-header{
-    background-color:red;
+header h1 {
+    font-weight: 800;
 }
 main{
     background-color: blue;
