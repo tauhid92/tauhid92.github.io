@@ -60,6 +60,10 @@ article{
     font-weight: 300;
     color:rgb(45, 45, 110);
 }
+/* link hover */
+.contacts-section>ol>li>a:hover{
+    color:rgb(157, 157, 158);
+}
 .contacts-section h2{
     text-align:center;
 }
@@ -100,4 +104,8 @@ footer{
 #email-link{
     text-decoration: none;
     font-weight: 400;
+}
+/* hover contact section*/
+#email-link:hover{
+    color:greenyellow;
 }
