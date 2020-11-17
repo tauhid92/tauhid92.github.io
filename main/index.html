@@ -5,24 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile-Home</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwyucQDtxC93gK997rq-t9JPxXVdN9uoc&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <script>
+        function initMap() {
+          const uluru = { lat: 44.987, lng: -93.258 };
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru,
+          });
+          const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+          });
+        }
+      </script>
 </head>
 <body>
-
     <header>
         <h1>Md Tauhidul Islam</h1>
-        <h3>Software Developer</h3>
-        
+        <h3>Software Developer</h3>       
     </header>
     <main>
         <div class="img-box">
             <img src="images/profile.jpeg" alt="profile-pic">
         </div>
-        <div class="content-box"></div>
-        <div class="content-box"></div>
-        <div class="content-box"></div>
-    </main>
+        <article>
+            <!--for wrapping the whole paragraph or section
+            sec1-->
+            <div class="paragraph-wrapper">
+                <h2>Hi I am Md</h2>
+                <p>I am a software developer from Minneapolis, Minnesota.</p>
+                <p>I have worked as a salesman, mechanic, customer service agent and also in security as well. I understand and have the knack to improve any process that goes into building any successful application with my wide expertise and I am also an Algorthmic Trader too. You will get the following  assured quality in:</p>
+                <ul>
+                    <li>User-friendly UI/UX that can adapt quickly</li>
+                    <li>Quality engineered and scalable backend applications</li>
+                    <li>Applications that are lightweight can run from cloud server and even hanheld devices</li>
+                </ul>
+                <p>Please have  a peak at my website and also explore my projects i have. Feel free to <a id="email-link"href="mailto:tauhidul2011@gmail.com">contact</a> me.</p>
+                <hr>
+            </div>
+            <!--sec2-->
+            <div class="paragraph-wrapper">
+                <h2>About Me</h2>
+                <p>I am very passionate about working with new technology and love art. If youare looking to build your dream app, or your industry based scalable application or even a trading bot, you have come to the right place. If you are here to build a peer group and also need mentorship i am here for you as well.</p>
+                <hr>
+            </div>
+            <!--contact box with links-->
+            <div class="contacts-section paragraph-wrapper">
+                <h2>My Contact</h2>
+                <p>You can reach me via the following:</p>
+                <ol>
+                    <li><a href="https://www.linkedin.com/in/md-tauhidul-islam-933b7989/" target="blank">Linkedin</a></li>
+                    <li><a href="https://github.com/tauhid92?tab=repositories" target="blank">GitHub</a></li>
+                </ol>
+            </div>
+            <!--map of my city part-->
+            <div id="map"></div>
+        </article>
+    </main><!--end of main-->
+<!--footer with copyright-->
     <footer>
-        <p>Footer</p>
+        <p>&copyMd Tauhidul Islam</p>
     </footer>
 </body>
 </html>
