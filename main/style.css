@@ -123,4 +123,12 @@ footer{
         margin:0;
     }
 
+    .img-box::after{
+        content:'My picture taken at Split Rock Lighthouse in Duluth,MN.';
+        position:absolute;
+        left:5%;
+        bottom:5%;
+        color:white;
+    }
+
 }
