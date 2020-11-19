@@ -109,3 +109,18 @@ footer{
 #email-link:hover{
     color:greenyellow;
 }
+@media (max-width:500px){
+
+    body{
+        margin: 0;
+        padding: 0;  
+    }
+
+    main{
+        color:rgb(85, 97, 67);
+        background-color:rgb(238, 238, 171);
+        width:100%;
+        margin:0;
+    }
+
+}
