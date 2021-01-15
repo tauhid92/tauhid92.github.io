@@ -1,140 +1,381 @@
 /* style for entire body of content */
-body{
-    margin: 0;
-    padding: 0;
-    background-color:rgb(221, 199, 139);    
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(221, 199, 139);
+  width: 100%;
 }
 
 /* header section */
-header {
-    height:200px;
-    color:rgb(238, 238, 171);
-    background-color:rgb(85, 97, 67);
-    padding-left:5px;
-    padding-right:5px;
-    padding-top:50px;
-    padding-bottom:5px;
-    text-align:center;   
+header { 
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+  width : 100%; 
+  height: 100px;
+  color: rgb(238, 238, 171);
+  background-color: rgb(85, 97, 67);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 35px;
+  padding-bottom: 5px;
+  
 }
-header h1{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    font-weight: 500;   
+.title {
+    
+    display:inline-block;
+    text-align: center;
+    margin:0;
+}
+header .title h1 {
+    padding-left: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  margin:0;
+}
+header .title h3{
+    margin:0;
+}
+header nav{
+    margin-right: 10px;
+}
+
+header nav ul{
+    
+    display:flex;
+    justify-content: space-between;
+    padding:0;
+    list-style: none;   
+}
+header nav ul li{
+    margin-right: 20px;
+}
+header nav ul li a:last-child{
+    margin-right: 0;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: rgb(238, 238, 171);    
+    font-size:25px;
+}
+header nav ul li a:hover{
+    text-decoration: underline;
+    color: rgb(255, 255, 255);    
+    font-size:30px;
 }
 /* .......................... */
 /* main>>>article>>>paragraph-wrapper,paragraph-wrapper, contacts-section,*/
-main{
-    color:rgb(85, 97, 67);
-    background-color:rgb(238, 238, 171);
-    width:60%;
-    margin-top:0;
-    margin-bottom:0;
-    margin-left: 20%;
-    margin-right:20%;
+main {
+  color: rgb(85, 97, 67);
+  background-color: rgb(238, 238, 171);
+  width: 100%;
+  margin: 0;
+
 }
-article{
-    width:75%;
-    margin:10px 10%;
-}
-.paragraph-wrapper{
-    /* width:75%;
-    margin:10px 10%; */
-    padding:25px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.paragraph-wrapper h2{
+.content-header{
+    width:100%;
     text-align: center;
+    font-size:25px;
 }
-.contacts-section{
-    text-align:left;
-    /* padding:10px; */
+.content-section{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height:auto;
+    
+}
+#about-me, #contacts{
+    background-color: rgb(122, 122, 37);
+    color: rgb(240, 240, 202);
+}
+#contacts{
+    margin:0;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight:100;
+}
+
+.paragraph-wrapper {
+  /* width:75%;
+    margin:10px 10%; */
+  flex:2;  
+  font-size: 18px;
+  padding: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.paragraph-wrapper h2 {
+  text-align: center;
+}
+form input, textarea{
+    width: 100%;
+}
+
+.holder{
+    flex:2;
     margin:10px;
-    margin-bottom: 20px;
+    padding:20px;
 }
-.contacts-section>ol>li{
-    padding-bottom: 2px;
+.holder>ol{
+    list-style-type:none;
 }
-.contacts-section>ol>li>a{
-    text-decoration: none;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 300;
-    color:rgb(45, 45, 110);
+.holder>ol>li{
+    margin: 5px;
 }
-/* link hover */
-.contacts-section>ol>li>a:hover{
-    color:rgb(157, 157, 158);
+.holder>ol>li>a{
+    text-decoration:none;
 }
-.contacts-section h2{
-    text-align:center;
+#form{
+    flex:1;
+    padding-top: 30px;
 }
-footer{
-    background-color:black;
+footer {
+  background-color: black;
 }
-.img-box{
-    height:80%;
-    padding:15px 15px;
+
+.img-box {
+    flex:1;
+  padding: 15px 15px;
+  position: relative;
+}
+.img-box::after {
+  content: "My picture taken at Split Rock Lighthouse in Duluth,MN.";
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+}
+.img-box:hover::after {
+  font-size: 20px;
+  font-weight: 200;
+  color: white !important;
+}
+.img-box-2{
+    flex:1;
+    padding: 15px;
     position:relative;
 }
-.img-box::after{
-    content:'My picture taken at Split Rock Lighthouse in Duluth,MN.';
-    position:absolute;
-    left:5%;
-    bottom:5%;
+.img-box-2::after {
+    content: "Rock Cllimbing!!";
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
 }
-.img-box:hover::after{
+.img-box-2:hover::after {
     font-size: 20px;
-    font-weight:200;
-    color:white !important;
+    font-weight: 200;
+    color: white !important;
 }
-img{
-    max-width:100%;
+.img-box-3 {
+    flex:1;
+    padding: 15px 15px;
+    position: relative;
 }
-footer{
-    padding-top: 20px;
-    height: 100px;
-    color:white;
-    text-align:center;
+img {
+  max-width: 100%;
+}
+footer {
+  padding-top: 20px;
+  height: 100px;
+  color: white;
+  text-align: center;
 }
 /* map at the end for my city */
 #map {
-    height: 400px;
-    width: 100%;
+  height: 400px;
+  width: 100%;
 }
 /* for email  */
-#email-link{
-    text-decoration: none;
-    font-weight: 400;
+#email-link {
+  text-decoration: none;
 }
 /* hover contact section*/
-#email-link:hover{
-    color:greenyellow;
+#email-link:hover {
+  color: greenyellow;
 }
-@media (max-width:500px){
-
-    body{
-        margin: 0;
-        padding: 0;  
+@media(max-width: 1480px){
+    .paragraph-wrapper {
+        /* width:75%;
+          margin:10px 10%; */
+        flex:1.5;  
+        font-size: 18px;
+        padding: 15px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     }
-
-    main{
-        color:rgb(85, 97, 67);
-        background-color:rgb(238, 238, 171);
-        width:100%;
+    .img-box {
+      flex:1.5;
+      padding: 15px 15px;
+      position: relative;
+    }  
+}
+@media (max-width: 1350px){
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    } 
+    header{
+        height:150px;
+        padding-top:50px;
+    }
+    .title{
+        padding-top:10px;
+    }
+    header nav{
+        padding-top:10px;
+    }
+    main {
+        color: rgb(85, 97, 67);
+        background-color: rgb(238, 238, 171);
+        width: 100%;
+        margin: 0;
+    }
+}
+@media (max-width: 1100px){
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    } 
+    header { 
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+      width : 100%; 
+      height: 200px;
+      color: rgb(238, 238, 171);
+      background-color: rgb(85, 97, 67);
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 35px;
+      padding-bottom: 5px;
+      
+    }
+    .title {
+        display:inline-block;
+        text-align: center;
+        height: 85px;
+        margin:0;
+        padding-bottom: 10px;
+    }
+    header .title h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 55px;
+      font-weight: 500;
+      margin:0;
+    }
+    header .title h3{
         margin:0;
     }
-
-    .img-box{
-        height:80%;
-        padding:15px 15px;
-        position:relative;
+    header nav{
+        margin-top:10px;
+    }
+    
+    header nav ul{
+        
+        display:flex;
+        justify-content: center;
+        padding:0;
+        list-style: none;   
+    }
+    header nav ul li{
+        margin-right: 20px;
+    }
+    header nav ul li a:last-child{
+        margin-right: 0;
+    }
+    header nav ul li a{
+        text-decoration: none;
+        color: rgb(247, 247, 242);    
+        font-size:25px;
+    }
+    header nav ul li a:hover{
+        text-decoration: underline;
+        color: rgb(255, 255, 255);    
+        font-size:30px;
+    }
+    main {
+        color: rgb(85, 97, 67);
+        background-color: rgb(238, 238, 171);
+        width: 100%;
+        margin: 0;
+    }
+    .content-section{
+        display:flex;
+        flex-direction: column;
+        
     }
 
-    .img-box::after{
-        content:'My picture taken at Split Rock Lighthouse in Duluth,MN.';
-        position:absolute;
-        left:5%;
-        bottom:5%;
-        color:white;
-    }
+     
+}
+@media (max-width: 500px) {
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
 
+  main {
+    color: rgb(85, 97, 67);
+    background-color: rgb(238, 238, 171);
+    width: 100%;
+    margin: 0;
+  }
+  header{
+    height: 250px;
+  }
+  header nav {
+    display: flex;
+    justify-content: center;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    list-style: none;
+  }
+  header nav ul li {
+    list-style: none;
+    margin-right: 10px;
+  }
+  header nav ul li:last-child {
+    list-style: none;
+    margin-right: 0;
+  }
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  header nav ul li a:hover {
+    color: rgb(151, 150, 150);
+    text-decoration: underline;
+  }
+
+  .img-box {
+    height: 80%;
+    padding: 15px 15px;
+    position: relative;
+  }
+
+  .img-box::after {
+    content: "My picture taken at Split Rock Lighthouse in Duluth,MN.";
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    color: white;
+  }
+}
+@media (max-width: 480px){
+    header{
+        height: 350px;
+    }
+    .title{
+        height: 150px;
+        padding: 15px;
+    }
+    header nav{
+        margin-top: 15px;
+    }    
 }
