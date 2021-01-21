@@ -81,8 +81,9 @@ main {
 .content-section{
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    height:auto;
+    justify-content: center;
+    height:100%;
+    width:100%;
     
 }
 #about-me, #contacts{
@@ -109,37 +110,37 @@ main {
   text-align: center;
 }
 form input, textarea{
-    width: 100%;
+  width: 100%;
 }
 
 .holder{
-    flex:2;
-    margin:10px;
-    padding:20px;
+  flex:2;
+  margin:10px;
+  padding:20px;
 }
 .holder>ol{
-    list-style-type:none;
+  list-style-type:none;
 }
 .holder>ol>li{
-    margin: 5px;
+  margin: 5px;
 }
 .holder>ol>li>a{
-    text-decoration:none;
+  text-decoration:none;
 }
 #form{
-    flex:1;
-    padding-top: 30px;
+  flex:1;
+  padding-top: 30px;
 }
 footer {
   background-color: black;
 }
 
 .img-box {
-    flex:1;
+  flex:1;
   padding: 15px 15px;
   position: relative;
 }
-.img-box::after {
+/* .img-box::after {
   content: "My picture taken at Split Rock Lighthouse in Duluth,MN.";
   position: absolute;
   left: 5%;
@@ -149,13 +150,13 @@ footer {
   font-size: 20px;
   font-weight: 200;
   color: white !important;
-}
+} */
 .img-box-2{
     flex:1;
     padding: 15px;
     position:relative;
 }
-.img-box-2::after {
+/* .img-box-2::after {
     content: "Rock Cllimbing!!";
     position: absolute;
     left: 5%;
@@ -165,7 +166,7 @@ footer {
     font-size: 20px;
     font-weight: 200;
     color: white !important;
-}
+} */
 .img-box-3 {
     flex:1;
     padding: 15px 15px;
@@ -206,7 +207,8 @@ footer {
     .img-box {
       flex:1.5;
       padding: 15px 15px;
-      position: relative;
+      /* position: relative; */
+      
     }  
 }
 @media (max-width: 1350px){
@@ -303,11 +305,34 @@ footer {
     }
     .content-section{
         display:flex;
-        flex-direction: column;
+        flex-direction: row;
         
-    }
+    }    
+}
+@media (max-width:1050px){
+  .img-box{
+    padding-top: 45px;
+  }
+  .img-box img{
+    min-height: 425px;
 
-     
+}
+@media (max-width:905px){
+  .img-box{
+    padding-top: 70px;
+  }
+  .flex-container{
+    justify-content: space-evenly;
+    display:flex;
+    flex-direction: column;
+  }  
+}
+@media (max-width:850px){
+  .content-section{
+    display:flex;
+    flex-direction: column;
+    
+}   
 }
 @media (max-width: 500px) {
   body {
@@ -359,13 +384,13 @@ footer {
     position: relative;
   }
 
-  .img-box::after {
+  /* .img-box::after {
     content: "My picture taken at Split Rock Lighthouse in Duluth,MN.";
     position: absolute;
     left: 5%;
     bottom: 5%;
     color: white;
-  }
+  } */
 }
 @media (max-width: 480px){
     header{
@@ -378,4 +403,5 @@ footer {
     header nav{
         margin-top: 15px;
     }    
+}
 }
